@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MWS - HADYAN AHMAD</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="../images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="css/calcstyless.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.css" />
+    <style>
+        html { 
+            background: url(../images/background.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+            position: relative;
+        }
+
+        body{
+            font-family: 'Roboto', sans-serif;
+            height: 100%;
+        }
+        .calc-wrapper{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 30px 80px 100px 50px 150px 30px;
+            grid-gap: 1em;
+        }
+
+        .menu{
+            padding: 1em;
+            grid-column: 1/3;
+        }
+
+        .calc-input1{
+            padding: 1em;
+            grid-column: 1/2;
+        }
+
+        .calc-input2{
+            padding: 1em;
+            grid-column: 2/3;
+        }
+
+        .calc-result{
+            padding: 1em;
+            grid-column: 1/2;
+            font-size: 25px;
+        }
+
+        .footer{
+            padding: 1em;
+            grid-column: 1/3;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            display: block;
+            border: 2px solid chartreuse;
+            border-radius: 4px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            font-size: 25px;
+        }
+
+        input:focus {
+            border:5px solid chartreuse;
+        }
+
+        h1{
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc-wrapper">
+        <div class="menu"><a href="../../public"><img class="image-shadow" src="../images/letter-h.png" alt="" srcset="" height="50" width="50"></a></div>
+        <div class="footer center">
+            <h1><span class="typcn typcn-calculator"></span> Simple Calculator</h1>
+        </div>
+        <div class="calc-input1">
+            <input type="number" ng-model="input1" placeholder="Input your number here">
+        </div>
+        <div class="calc-input2">
+            <input type="number" ng-model="input2" placeholder="Input your number here">
+        </div>
+        <div class="footer center">
+            <button class="btn-group" ng-click="input1 = null; input2 = null;" onmouseover="btnGroupHover(this)" onmouseout="btnGroupNormal(this)">Reset</button>
+        </div>
+        <div class="calc-result">
+            <h2>Result: {{input1 + input2}}</h2>
+        </div>
+        <div class="footer center">
+            <button class="btn-group" onmouseover="btnGroupHover(this)" onmouseout="btnGroupNormal(this)" onclick="window.open('https://github.com/hadyandev')"><span class="typcn typcn-social-github"></span> Github</button>
+            <button class="btn-group" onmouseover="btnGroupHover(this)" onmouseout="btnGroupNormal(this)" onclick="window.open('https://linkedin.com/in/hadyandev')"><span class="typcn typcn-social-linkedin"></span> LinkedIn</button>
+            <button class="btn-group" onmouseover="btnGroupHover(this)" onmouseout="btnGroupNormal(this)" onclick="window.open('https://instagram.com/hadyandev')"><span class="typcn typcn-social-instagram"></span> Instagram</button>
+            <button class="btn-group" onmouseover="btnGroupHover(this)" onmouseout="btnGroupNormal(this)" onclick="window.open('https://twitter.com/hadyandev')"><span class="typcn typcn-social-twitter"></span> Twitter</button>
+        </div>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            input1 = "";
+            input2 = "";
+        });
+    </script>
+    <script src="../app.js"></script>
+</body>
+</html>
