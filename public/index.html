@@ -1,46 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MWS - HADYAN AHMAD</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="img/favicon.ico" rel="shortcut icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.css" />
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="manifest" href="manifest.json" />
+    <style>
+      .container {
+        display: grid;
+        width: 100%;
+        grid-template-rows: auto auto auto auto auto auto;
+      }
+      .menu {
+        grid-column: 1/1;
+        background: #fff;
+      }
+      .menu > .wrapper {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+      }
+      .menu .logo {
+        max-width: 230px;
+        padding: 1em;
+        vertical-align: middle;
+      }
+      .sidebar {
+        grid-column: 1/1;
+      }
+      .sidebar > .wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1em;
+      }
+      .sidebar > .wrapper > .profile-picture {
+        max-width: 100px;
+        border-radius: 100%;
+        padding: 1em;
+        margin-top: 1em;
+      }
+      .konten {
+        grid-column: 1/1;
+      }
+      .footer {
+        grid-column: 1/1;
+        grid-row: 6/7;
+        background: url("img/night.jpg");
+        color: #fff;
+        margin-top: 2em;
+      }
+      .footer > .wrapper {
+        text-align: center;
+        padding: 2em 1em 3em;
+        min-height: 100px;
+      }
+      .info {
+        width: 100%;
+      }
+      .info ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .info ul > li {
+        margin-bottom: 0.8em;
+      }
+      @media only screen and (min-width: 768px) {
+        .container {
+          grid-template-columns: repeat(5, 1fr);
+          grid-template-rows: auto auto auto auto auto;
+        }
+        .menu {
+          grid-column: 1/6;
+        }
+        .menu .logo {
+          max-width: 300px;
+        }
+        .menu > .wrapper {
+          justify-content: start;
+        }
+        .footer {
+          grid-row: 5/5;
+          grid-column: 1/6;
+        }
+      }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .sidebar {
+          grid-column: 1/2;
+          grid-row: 2/5;
+        }
+        .konten {
+          grid-column: 2/6;
+        }
+      }
+      @media only screen and (min-width: 1024px) {
+        .sidebar {
+          grid-column: 2/3;
+          grid-row: 2/5;
+        }
+        .konten {
+          grid-column: 3/5;
+        }
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <div class="menu"><a href="#"><img class="image-shadow" src="img/letter-h.png" alt="" srcset="" height="50" width="50"></a></div>
-        <div class="sidebar center">
-            <img class="image-cropper image-shadow responsive" src="img/hadyan.jpg" alt="" srcset="" height="250" width="250">
-            <h4 id="tes">Hadyan Ahmad</h4>
-            <h4>Mobile Web Specialist Project</h4>
+      <div class="menu toolbar">
+        <div class="wrapper">
+          <img
+            class="logo"
+            src="img/gdk-logo.png"
+            alt="Google Developer Kejar"
+          />
         </div>
-        <div class="konten">
-            <div class="shortcut" onclick="window.location.replace('./calculator')">
-                <i class="fas fa-calculator"></i> Calculator
-            </div>
+      </div>
+      <div class="sidebar">
+        <div
+          class="wrapper card"
+          style="background:url(img/cloud.jpg) center/cover; color: black"
+        >
+          <img
+            class="profile-picture"
+            src="img/hadyan.jpg"
+            alt="Hadyan Ahmad"
+          />
+          <h2 class="name">Hadyan Ahmad</h2>
+          <div class="info">
+            <ul>
+              <li>
+                <div class="info-desc">GDK - Mobile Web Specialist Project</div>
+              </li>
+              <li>
+                <div class="info-medsos">
+                  <a
+                    href="https://github.com/hadyandev"
+                    target="_blank"
+                    rel="noopener"
+                    style="color:black"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://linkedin.com/in/hadyandev"
+                    target="_blank"
+                    rel="noopener"
+                    style="color:black"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://twitter.com/hadyandev"
+                    target="_blank"
+                    rel="noopener"
+                    style="color:black"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    href="https://instagram.com/hadyandev"
+                    target="_blank"
+                    rel="noopener"
+                    style="color:black"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="konten">
-            <div class="shortcut" onclick="window.location.replace('./maps')">
-                <i class="fas fa-map-marker-alt"></i> Leaflet Mapbox
-            </div>
+      </div>
+      <div class="konten">
+        <div class="wrapper card grid">
+          <div class="title title-text">
+            <h2 class="title-text">Menjumlahkan 2 Angka</h2>
+          </div>
+          <div
+            class="title title-background"
+            style="background: url(img/add2numbers.jpg) center / cover;"
+          ></div>
+          <div class="supporting-text">
+            Aplikasi web ini merupakan aplikasi kalkulator sederhana untuk
+            menjumlahkan 2 angka.
+          </div>
+          <div class="actions">
+            <a class="button colored" href="./project1"> LIHAT APLIKASI WEB </a>
+          </div>
         </div>
-        <div class="konten">
-            <div class="shortcut" onclick="alert('No content available')">
-                <i class="fas fa-times"></i> Undefined
-            </div>
+        <div class="wrapper card grid">
+          <div class="title title-text">
+            <h2 class="title-text">Lokasi Istimewa dengan Mapbox</h2>
+          </div>
+          <div
+            class="title title-background"
+            style="background: url(img/map.jpg) center / cover;"
+          ></div>
+          <div class="supporting-text">
+            Aplikasi web ini merupakan aplikasi peta untuk menampilkan suatu
+            titik lokasi istimewa. Aplikasi ini menggunakan API Mapbox.
+          </div>
+          <div class="actions">
+            <a class="button colored" href="./project2"> LIHAT APLIKASI WEB </a>
+          </div>
         </div>
-        <div class="footer center">
-            <a href="https://github.com/hadyandev" target="_blank" class="a-btn"><span class="typcn typcn-social-github"></span> Github</a>
-            <a href="https://linkedin.com/in/hadyandev" target="_blank" class="a-btn"><span class="typcn typcn-social-linkedin"></span> Linkedin</a>
-            <a href="https://instagram.com/hadyandev" target="_blank" class="a-btn"><span class="typcn typcn-social-instagram"></span> Instagram</a>
-            <a href="https://twitter.com/hadyandev" target="_blank" class="a-btn"><span class="typcn typcn-social-twitter"></span> Twitter</a>
+        <div class="wrapper card grid">
+          <div class="title title-text">
+            <h2 class="title-text">Fetch JSON</h2>
+          </div>
+          <div
+            class="title title-background"
+            style="background: url(img/fetch-json.jpg) center / cover;"
+          ></div>
+          <div class="supporting-text">
+            Aplikasi web ini merupakan aplikasi peta untuk menampilkan beberapa
+            titik lokasi istimewa yang datanya diambil dari json. Aplikasi ini
+            juga menggunakan API Mapbox.
+          </div>
+          <div class="actions">
+            <a class="button colored" href="./project3"> LIHAT APLIKASI WEB </a>
+          </div>
         </div>
+      </div>
+      <div class="footer">
+        <div class="wrapper">
+          <h2>Hadyan Ahmad</h2>
+          <div>This website is built for Google Developer Kejar Class</div>
+          <a
+            href="https://github.com/hadyandev/mws-project"
+            target="_blank"
+            rel="noopener"
+            class="github-link"
+            ><i class="fab fa-github"></i>GitHub</a
+          >
+        </div>
+      </div>
     </div>
     <script src="js/fontawesome-all.min.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
