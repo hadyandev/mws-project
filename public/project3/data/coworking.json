@@ -1,0 +1,52 @@
+{
+  "places": [
+    {
+      "location": [-6.3015898, 106.6528262],
+      "title": "EV Hive The Breeze Coworking Space",
+      "image": "../project3/img/evhive-the-breeze.jpg",
+      "review": "Terletak di kawasan strategis BSD City, Tangerang. EV Hive Coworking Space menawarkan berbagai kelengkapan fasilitas untuk para pengunjung mulai dari area bekerja yang kece dan nyaman, koneksi internet super ngebut, free flow beverages, mailing address, bahkan storage space. EV Hive The Breeze juga memiliki pemandangan danau yang indah. Dengan semua fasilitas itu, kalian akan nyaman banget untuk bekerja di EV Hive, bagi yang ingin mengadakan rapat, presentasi, seminar atau workshop EV Hive juga menyediakan area untuk event lengkap dengan sound system, proyektor, layar, dan kabel-kabel yang diperlukan. EV Hive The Breeze menjadi pilihan yang tepat bagi anda yang sedang mencari Co-Working Space di Serpong, BSD, Alam Sutera."
+    },
+    {
+      "location": [-6.2516578, 106.6237434],
+      "title": "WINC Collaborative Space & Café",
+      "image": "../project3/img/winc-collaborative-space-cafe.jpg",
+      "review": "WINC adalah ruang Co-Working Space yang menyediakan gaya kerja masa kini di mana kalian dapat bekerja bersama dengan orang lain untuk memaksimalkan kinerja perkejaan kalian. WINC Space juga dapat digunakan untuk hal-hal lain selain hanya menjadi tempat untuk nongkrong dan bersantai, seperti pertemuan bisnis, meeting, dan event. Selain meja, kursi dan sofa yang nyaman, WINC juga menyediakan printer dan papan tulis untuk menulis atau menjelaskan ide-ide kalian. Rasanya WINC menjadi definisi dari istilah “kantor yang nyaman” yah. Para pengunjung juga dapat dengan bebas membaca buku dan majalah yang tersedia di rak buku. WINC Collaborative Space adalah tempat co-working space di Serpong yang bagus untuk bekerja."
+    },
+    {
+      "location": [-6.300295, 106.6851733],
+      "title": "Two Spaces BSD – Coworking Space",
+      "image": "../project3/img/two-spaces-bsd-coworking-space.jpg",
+      "review": "Two Spaces adalah co-working space dapat menjadi pilihan anda bagi yang meninginginkan suasana lebih asri, kombinasi dari tanaman dan rerumputan yang tertata rapi membuat suasana bekerja di tempat ini terasa lebih fresh. Two Space BSD berada hanya 5 menit dari Jalan Tol Ulujami – Serpong dan 30 menit ke Jakarta – tol Merak. Two Spaces BSD terinspirasi oleh kebutuhan fleksibilitas para pekerja untuk dapat mencapai apa yang mereka sebut sebagai keseimbangan kerja dan kehidupan."
+    },
+    {
+      "location": [-6.3051776, 106.7548501],
+      "title": "GoodSpace Coworking Office & Meeting Space",
+      "image": "../project3/img/goodspace-coworking-office-meeting-space.jpg",
+      "review": "GoodSpace adalah coworking space inovatif bagi mereka yang suka bermain dengan cara kreatif. Sebuah tempat yang tepat bagi individu kreatif ke individu bisnis, startup dan wirausahawan serta freelancer profesional, GoodSpace menawarkan lingkungan yang menstimulasi di mana mimpi dapat menjadi kenyataan. Dilengkapi dengan fasilitas unggulan untuk mendukung aktivitas kerja dan meeting kalian."
+    },
+    {
+      "location": [-6.247656, 106.6244387],
+      "title": "Koloni Bintaro",
+      "image": "../project3/img/koloni-bintaro.jpg",
+      "review": "Koloni Bintaro merupakan ruang kerja sekaligus tempat bertemunya sosok-sosok kreatif unggulan khususnya yang berada di Bintaro dan sekitarnya untuk satu tujuan yang sama, berkarya, bekerja dan bersosialisasi. Koloni Bintaro adalah di mana para kreatif berkumpul untuk menginspirasi dan bekerja bersama secara harmonis. Umumnya menjadi tempat bekerja bagi pekerja lepas, pengusaha dan penggemar kreatif. Didukung oleh fasilitas seperti 20 kursi di sekitar meja besar, Ruang coworking yang sepenuhnya ber-AC untuk membuat kalian tetap nyaman, wifi super ngebut, Ada air mineral dan teh yang bebas diminum sepuasnya, ditambah secangkir kopi tanpa akhir untuk para pecandu kafein untuk menjaga otak kalian tetap bekerja, dan printing station."
+    },
+    {
+      "location": [-6.2218322, 106.6313568],
+      "title": "Epica Lifestyle Offices And Epica Coffee Culture",
+      "image": "../project3/img/epica-coffee.jpg",
+      "review": "Ruang kasual yang funky dari Epica Lifestyle Offices diciptakan oleh tim pengusaha Indonesia dari berbagai sektor properti dan real estate yang ingin memberikan solusi bisnis satu atap. Menawarkan kantor layanan berkualitas tinggi, ruang pertemuan pribadi, kemampuan konferensi video dan layanan pencetakan, Epica Lifestyle Offices memiliki semuanya."
+    },
+    {
+      "location": [-6.257137, 106.6169671],
+      "title": "Skystar Ventures Coworking Space",
+      "image": "../project3/img/skystar-ventures-coworking-space.jpg",
+      "review": "Skystar Ventures bertempat di Universitas Multimedia Nusantara, New Media Tower Lv.12 Gading Serpong. Skystar Ventures adalah sebuah wadah bagi para founder startup, komunitas startup dan teknologi. Co-working Space ditempat ini sangat mendukung untuk aktivitas kerja dan meeting, dengan berbagai fasilitas seperti events space, wi-fi, telepon, parkir gratis, cafe, outdoor area. Para pengunjung juga dapat menjalin interaksi mahasiswa lintas universitas, memperluas jaringan dengan komunitas bisnis startup hingga pelaku industri kreatif dan saling bertukar ilmu. Skystar Ventures didirikan oleh Universitas Multimedia Nusantara dan Kompas Gramedia Group."
+    },
+    {
+      "location": [-6.4180393, 106.6650618],
+      "title": "DiLo (Digital Innovation Lounge) Tangerang",
+      "image": "../project3/img/dilo-tangerang.jpg",
+      "review": "DiLo (Digital Inovation Lounge) Tangerang adalah sebuah Creative Camp pusat berkumpulnya peminat dan pelaku industri kreatif digital di kota Tangerang yang didirikan oleh MIKTI bekerja sama dengan Telkom. Co-working space DiLo menyediakan 3 ruangan yang terbagi menjadi ruangan meeting, ruangan workshop, dan ruangan co-working."
+    }
+  ]
+}

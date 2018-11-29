@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project 2 - Lokasi Spesial</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="../img/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+      integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+      crossorigin=""
+    ></script>
+    <style>
+      .container {
+        display: grid;
+        width: 100%;
+        grid-template-columns: auto auto;
+      }
+      .menu {
+        grid-column: 1/3;
+        background: #fff;
+      }
+      .menu > .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .menu .logo {
+        max-width: 230px;
+        padding: 1em;
+        vertical-align: middle;
+      }
+      .content1 {
+        grid-column: 1/3;
+      }
+      .content1 > .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .content1 > .wrapper > .card {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .content1 > .card > .map {
+        position: relative;
+      }
+
+      #mapid {
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 300px;
+      }
+
+      .content2 {
+        grid-column: 1/2;
+      }
+      .content2 > .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .content2 > .wrapper > .card {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .content2 > .wrapper > .card > .picture {
+        height: 100px;
+        min-width: 230px;
+        object-fit: scale-down;
+      }
+
+      .content2 > .wrapper > .card > .rectangle {
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+      }
+
+      img.landscape {
+        position: absolute;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100%;
+        width: auto;
+      }
+
+      .content3 {
+        grid-column: 2/3;
+      }
+      .content3 > .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+      .content3 > .wrapper > .card {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+      }
+      .content3 > .wrapper > .card > .info > p {
+        padding: 1em;
+        text-align: center;
+        font-size: 15px;
+      }
+      .footer {
+        grid-column: 1/3;
+        background: url("../img/night.jpg");
+        color: #fff;
+      }
+      .footer > .wrapper {
+        text-align: center;
+        padding: 2em 1em 3em;
+        min-height: 100px;
+      }
+
+      @media only screen and (min-width: 360px) {
+        .content1 > .wrapper > .card {
+          max-width: 330px;
+        }
+        .content2 > .wrapper > .card {
+          max-width: 330px;
+        }
+
+        .content3 > .wrapper > .card {
+          max-width: 330px;
+        }
+        .content2 > .wrapper > .card > .rectangle {
+          width: 300px;
+          height: 90px;
+          overflow: hidden;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        .content1 {
+          grid-column: 1/3;
+        }
+        .content2 {
+          grid-column: 1/3;
+        }
+        .content3 {
+          grid-column: 1/3;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        .menu > .wrapper {
+          justify-content: start;
+        }
+        .menu .logo {
+          max-width: 300px;
+        }
+
+        .content1 > .wrapper > .card {
+          max-width: 760px;
+        }
+        .content2 > .wrapper > .card {
+          max-width: 760px;
+        }
+
+        .content3 > .wrapper > .card {
+          max-width: 760px;
+        }
+      }
+
+      @media only screen and (min-width: 1200px) {
+        .content1 > .wrapper > .card {
+          max-width: 1110px;
+        }
+        .content2 > .wrapper > .card {
+          max-width: 1110px;
+        }
+
+        .content3 > .wrapper > .card {
+          max-width: 1110px;
+        }
+
+        .content2 > .wrapper > .card > .rectangle {
+          height: 500px;
+          width: 800px;
+          overflow: hidden;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="menu toolbar">
+        <div class="wrapper">
+          <button
+            class="button icon back-button"
+            onclick="window.history.back();"
+            type="button"
+            role="button"
+            aria-label="Back"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+              />
+            </svg>
+          </button>
+          <a href="../">
+            <img
+              class="logo"
+              src="../img/gdk-logo.png"
+              alt="Google Developer Kejar"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="content1">
+        <div class="card">
+          <div class="map"><div id="mapid"></div></div>
+        </div>
+      </div>
+      <div class="content2">
+        <div class="wrapper" id="contentWrapper">
+          <div class="card">
+            <div class="rectangle">
+              <img
+                src="img/tokyo-tower.jpg"
+                class="landscape"
+                alt="Tokyo Tower"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content3">
+        <div class="wrapper" id="contentWrapper">
+          <div class="card">
+            <div class="info">
+              <h2 style="text-align: center;">MENARA TOKYO</h2>
+              <p>
+                Menara Tokyo (東京タワー Tokyo Tower) adalah sebuah menara di
+                Taman Shiba, Tokyo, Jepang. Tinggi keseluruhan 332,6 m dan
+                merupakan bangunan menara baja tertinggi di dunia yang tegak
+                sendiri di permukaan tanah.[4] Berdasarkan peraturan keselamatan
+                penerbangan, menara ini dicat dengan warna oranye internasional
+                dengan warna putih di beberapa tempat. Bangunan sekelilingnya
+                lebih rendah, sehingga Menara Tokyo bisa dilihat dari berbagai
+                lokasi di pusat kota. <br /><br />
+                Nama resminya adalah Nippon Denpatō (日本電波塔, Menara
+                Gelombang Radio Jepang). Pencetusnya adalah pengusaha surat
+                kabar dari Osaka bernama Hisakichi Maeda (nantinya direktur
+                utama Sankei Shimbun, Kansai Telecasting Corporation, dan Osaka
+                Broadcasting Corporation). Hisakichi melihat kebutuhan
+                mendirikan menara pemancar bersama untuk sejumlah stasiun TV di
+                Tokyo. <br /><br />
+                Desain menara mengikuti Menara Eiffel di Paris, Perancis.
+                Walaupun lebih tinggi 8,6 m dari Menara Eiffel (lebih tinggi
+                32,6 m bila antena televisi juga dihitung), Menara Tokyo
+                beratnya hanya 4.200 ton dibandingkan menara Eiffel yang
+                beratnya 7.300 ton. Bagian atas menara dirancang untuk tahan
+                terhadap hembusan angin kencang hingga kecepatan angin 100 m per
+                detik, sedangkan bagian bawah menara tahan terhadap angin
+                berkecepatan 80 m per detik. <br /><br />
+                Source (<a
+                  target="_blank"
+                  href="https://id.wikipedia.org/wiki/Menara_Tokyo"
+                  >Wikipedia</a
+                >)
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer">
+          <div class="wrapper">
+            <h2>Hadyan Ahmad</h2>
+            <div>This website is built for Google Developer Kejar Class</div>
+            <a
+              href="https://github.com/hadyandev/mws-project"
+              target="_blank"
+              rel="noopener"
+              class="github-link"
+              ><i class="fab fa-github"></i>GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/fontawesome-all.min.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+  </body>
+</html>
